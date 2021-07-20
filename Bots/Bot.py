@@ -26,6 +26,10 @@ class Bot(ABC):
         pass
 
     @abstractmethod
+    def apresentacao(self):
+        pass
+
+    @abstractmethod
     def boas_vindas():
         pass
     

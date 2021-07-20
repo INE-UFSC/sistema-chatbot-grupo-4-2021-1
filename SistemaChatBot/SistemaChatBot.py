@@ -21,32 +21,36 @@ class SistemaChatBot:
             try:
                 ibot = int(ibot)
             except:
-                print("O valor inserido deve ser um número")
+                print("O valor inserido deve ser um número.")
                 continue
 
             if ibot >= 0 and ibot < len(self.__lista_bots):
                 self.__bot = self.__lista_bots[ibot]
                 break
             else:
-                print("Não há um bot com esse número")
+                print("Não há um bot com esse número.")
 
     def mostra_comandos_bot(self):
         print(self.__bot.mostra_comandos())
 
     def le_envia_comando(self):
-        cmd = input("Insira o comando, ou insira -1 para sair")
+        cmd = input("Insira o comando, ou insira -1 para sair: ")
         if cmd == "-1":
             return False
-        self.__bot.executa_comando(cmd)
+
+        print()
+        print(f"{self.__bot.nome} diz: {self.__bot.executa_comando(cmd)}")
+        return True
 
     def inicio(self):
         self.boas_vindas()
         self.mostra_menu()
         self.escolhe_bot()
-        self.__bot.boas_vindas()
+        print(f"--> {self.__bot.nome} diz: {self.__bot.apresentacao()}")
+        print()
         while True:
-            print(self.mostra_comandos_bot)
-            if not self.le_envia_comando:
+            self.mostra_comandos_bot()
+            if not self.le_envia_comando():
                 break
         self.__bot.despedida()
 

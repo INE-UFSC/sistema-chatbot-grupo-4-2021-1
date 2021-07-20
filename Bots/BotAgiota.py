@@ -17,7 +17,7 @@ class BotAgiota(Bot):
         try: 
             respostas = {"1": "Pagar a dívida, antes que algo pior aconteça...",
                          "2": f"Você deve exatamente R${r.randint(50000, 100000)}.",
-                         "3": f"Muito bom, muito bom, mas aindam faltam os juros de R${r.randint(50000, 100000)}",
+                         "3": f"Muito bom, muito bom, mas aindam faltam os juros de R${r.randint(50000, 100000)}.",
                         "4": f"R${r.randint(50000, 100000)}, esse é meu nome pra você."}
             return respostas[cmd]
         except:
