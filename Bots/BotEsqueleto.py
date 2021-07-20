@@ -1,6 +1,7 @@
   
 from Bots.Bot import Bot
 
+# bot adquirido do grupo 6
 class BotEsqueleto(Bot):
     __com = {0: "Bom dia",
              1: "Qual é seu nome?",

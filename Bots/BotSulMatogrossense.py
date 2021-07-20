@@ -1,5 +1,6 @@
 from Bots.Bot import Bot
 
+# bot adquirido do grupo 6
 class BotSulMatogrossense(Bot):
 
     __com = {0: "Aôba!",
