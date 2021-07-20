@@ -27,4 +27,4 @@ class BotAgiota(Bot):
         return "Vamos lá, se pagar à vista talvez eu te faça um desconto."
 
     def despedida(self):
-        return f"Ei! Ainda tá faltando pagar {r.randint(50000, 100000)}!"
+        return f"Ei! Você ainda precisa pagar {r.randint(50000, 100000)}!"
